@@ -3,35 +3,39 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="./css/styles.css" rel="stylesheet" type="text/css">
+	<link href="./css/styles.css" media="only screen and (min-width: 1301px)" rel="stylesheet" type="text/css">
+	<link href="./css/styles-mob.css" media="only screen and (max-width: 1300px)" rel="stylesheet" type="text/css">	
 	<title>IC &quot;Repair Design Project&quot;</title>
 </head>
 <body>
 	<header>
 		<div class="wrapper">
 			<nav class="nav">
-				<a class="nav__link" href="#" target="_self">IC &quot;Repair Design Project&quot;</a>
-					<!--Проставить href везде-->
+				<a class="nav__link this-page" href="#">IC &quot;Repair Design Project&quot;</a>
+					<!--Проставить href везде (если знать URL)-->
+
+					<!--nav__ul - только для десктопной версии-->
 				<ul class="nav__ul">
 					<li>
-						<a class="nav__link" href="#" target="_self">HOME</a>
+						<a class="nav__link this-page" href="#">HOME</a>
 					</li>
 					<li>
-						<a class="nav__link" href="#projects" target="_self">PROJECTS</a>
+						<a class="nav__link" href="#projects">PROJECTS</a>
 					</li>
 					<li>
-					<a class="nav__link" href="#measurement" target="_self">MEASUREMENT</a>
+					<a class="nav__link" href="#measurement">MEASUREMENT</a>
 					</li>
 					<li>
-						<a class="nav__link" href="#" target="_self">TEAM</a>
+						<a class="nav__link" href="#">TEAM</a>
 					</li>
 					<li>
-						<a class="nav__link" href="#clients" target="_self">REVIEWS</a>
+						<a class="nav__link" href="#clients">REVIEWS</a>
 					</li>
 					<li>
-						<a class="nav__link" href="#contacts" target="_self">CONTACTS</a>
+						<a class="nav__link" href="#contacts">CONTACTS</a>
 					</li>
 				</ul>
+
 				<div class="nav__phone">
 					<a class="nav__link nav__link-phone" href="tel:+79287683239">+7 (928) 768-32-39</a>
 					<button class="nav__button-call-request">Request a call
@@ -46,16 +50,27 @@
 				<div class="slogan__shade">
 					<h1 class="slogan__h1">Turnkey Repair in the <br>city of <span class="slogan__h1-rostov">Rostov-on-Don</span>
 					</h1>
-					<p class="slogan__paragraph">Get ready-made turnkey repairs on time <br>with work time saving up to 45 days and 20% from <br>cost of materials due to the organization of work						
+
+					<!--параграф для декстопа-->
+					<p class="slogan__paragraph">Get ready-made turnkey repairs on time <br>with work time saving up to 45 days and 20% from cost of materials due to the organization of work						
 					</p>
-					<div class="slogan__block-buttons">
-						<form action="#" method="post">
-							<button type="button" class="slogan__button-calculate">CALCULATE THE COST
-							</button>
-							<button class="slogan__button-submit" type="submit">SUBMIT YOUR APPLICATION
-							</button>
-						</form>
-					</div>
+
+					<!--параграф для мобильной версии-->
+					<p class="slogan__paragraph-mob">Get ready-made turnkey repairs on time <br>with work time saving up to 45 days and <br>20% from cost of materials due to the organization of work						
+					</p>
+
+					<form class="slogan__block-buttons" action="#" method="post">
+						<button type="button" class="slogan__button-calculate">CALCULATE THE COST
+						</button>
+
+						<!--кнопка для десктопа-->
+						<button class="slogan__button-submit" type="submit">SUBMIT YOUR APPLICATION
+						</button>
+						<!--кнопка для мобильной версии-->
+						<button class="slogan__button-submit-mob" type="submit">APPLICATION
+						</button>
+
+					</form>
 				</div>
 			</section>
 		</div>
@@ -64,8 +79,20 @@
 				<div class="section-projects__completed">
 					<h2 class="section-projects__title" id="projects">Completed <br>projects
 					</h2>
-					<p class="section-projects__paragraph">Only a small part of the work performed by our company is presented <br>on the site. For 14 years on in the construction <br>market we have made happy more than 1000 families
+					<p class="section-projects__paragraph">Only a small part of the work performed by our company is presented on the site. For 14 years on in the construction <br>market we have made happy more than 1000 families
 					</p>
+
+					<!--Слайдер для мобильной версии-->
+					<div class="section-projects__examples-mobile">
+						<div class="examples-arrow-mobile-left">
+							<div class="arrow-left">
+							</div>
+						</div>
+						<div class="examples-arrow-mobile-right">
+							<div class="arrow-right">
+							</div>
+						</div>
+					</div>
 					<div class="section-projects__descriptions">
 						<dl class="section-projects__description-list">
 							<dt class="section-projects__description-term">City:</dt>
@@ -73,17 +100,18 @@
 							<dt class="section-projects__description-term repair-time">Repair time:</dt>
 							<dd class="section-projects__description-details">3.5 months</dd>
 						</dl>
-						<dl>
+						<dl class="section-projects__description-list">
 							<dt class="section-projects__description-term">apartment area:</dt>
 							<dd class="section-projects__description-details">81 m2</dd>
 							<dt class="section-projects__description-term repair-cost">Repair Cost:</dt>
 							<dd class="section-projects__description-details">Upon request</dd>
 						</dl>
 					</div>
+					<!--Конец слайдера для мобильной версии-->
+
+					<!--блоки section-projects__slider и section-projects__examples - только для десктопной версии-->
 					<div class="section-projects__slider">
 						<img src="./images/arrow_left.svg" alt="Left-pointing arrow">
-						<!-- <div class="section-projects__slider-button"> -->
-						
 						<div class="section-projects__slider_wrapper">
 							<button class="section-projects__slider-button"></button>
 							<button class="section-projects__slider-button"></button>
@@ -94,13 +122,12 @@
 				</div>
 				<div class="section-projects__examples">
 					<div class="section-projects__examples-links">
-						<!-- add hr (as border-bottom?)-->
 						<a class="section-projects__example-link" href="#">Rostov-on-Don, Admiral</a>
 						<a class="section-projects__example-link" href="#">Sochi Thieves</a>
 						<a class="section-projects__example-link" href="#">Rostov-on-Don Patriotic</a>
 					</div>
 					<div>
-						<img class="section-projects__img" src="./images/admiral-project.png" alt="Rostov-on-Don, Admiral" title="">
+						<img class="section-projects__img" src="./images/admiral-project.png" alt="Rostov-on-Don, Admiral">
 					</div>
 				</div>
 			</section>
@@ -110,51 +137,41 @@
 				<h3 class="section-control__title">online control
 				</h3>
 				<div class="icon camera">
-					<img src="./images/camera.svg" alt="camera-icon">
-					<!-- Add HRs using pseudo elements-->
+					<embed src="./images/camera.svg" width="34">
 				</div>
 			</div>
 			<div class="section-control__video">
-				<img src="./images/repair-video.png" class="control__video">
+				<img src="./images/repair-video.png" class="control__video" alt="Online video monitoring">
 				<img class="play-button" src="./images/play-button.svg" alt="Click here to play">
 			</div>
 			<div class="section-control__details">
 				<hr class="section-control__hr">
 				<p class="section-control__description">At each facility, a camera is installed that broadcasts the progress of work on the clock. At any time, you can go to our website and monitor the progress of work in your apartment. You can watch the live broadcast from one of our facilities! <br>Leave a request below and you will receive a link to the broadcast.
 				</p>
-
-				
-
-
 				<form action="#" method="post" class="section-control__form" name="surv-request">
 					<div class="surv-request-form__fields">
 						<div class="surv-request-form__field">
-						<label for="surv-request__customer-name" class="surv-request-form__label">Name</label>
-						<input id="surv-request__customer-name" class="surv-request-form__input" type="text" name="Customer name" placeholder="What is your name:">
+							<label for="surv-request__customer-name" class="surv-request-form__label">Name</label>
+							<input id="surv-request__customer-name" class="surv-request-form__input" type="text" name="Customer name" placeholder="What is your name:">
 						</div>
 						<div class="surv-request__form__field">
 							<label for="surv-request__customer-phone" class="surv-request-form__label">Phone</label>
 							<input id="surv-request__customer-phone" class="surv-request-form__input" type="text" name="Customer phone" placeholder="Your phone number:">
-						</div>
-						<div>
-							<button class="surv-request__form__submit" type="submit">submit</button>
-						</div>
+						</div>						
+						<button class="surv-request__form__submit" type="submit">submit</button>
 					</div>
-					<!-- <input class="surv-request__personal-data" id="surv-personal-data" value="agreed" type="checkbox" checked>
-					<label class="data-processing" for="surv-personal-data">I agree to the processing of personal data</label> -->
 					<div class="surv-request-agree">
 					  <label class="agree-label" for="surv-personal-data">
 					    <input type="checkbox" class="agree-checkbox" id="surv-personal-data" value="agreed" checked>
-					    <div class="agree-fake-checkbox">
-					    </div>
-					    <span class="data-processing">I agree to the processing of personal data</span>
+					    <span class="agree-fake-checkbox">
+					    </span>
+
+					    <span id="desk" class="data-processing">I agree to the processing of personal data</span>
+					    <span id="mob" class="data-processing-white">I agree to the processing of personal data</span>
+
 					  </label>
 					</div>
 				</form>
-
-
-
-
 			</div>
 		</section>
 		<section class="section-repair-types wrapper">
@@ -162,12 +179,13 @@
 				<h3 class="section-rep-types__header">TYPES OF REPAIR			
 				</h3>
 				<div class="icon tools">
-					<img src="./images/repair-icon.svg" alt="tools icon" width="" height="">
-					<!--Add ::before and ::after-->
-				</div>
+					<img src="./images/repair-icon.svg" alt="Tools icon">
+				</div>			
+
+				<!--Начало десктопной версии блока с фотографиями типов ремонтов-->
 				<div class="repair-types__list">
 					<div class="repair-types__description">
-						<img src="./images/redecorating.png" alt="Redecoration" width="392" height="421">
+						<img src="./images/redecorating.png" alt="Redecoration">
 						<div class="repair-types__details">
 							<strong class="repair-type">Redecorating</strong>
 							<ul class="repair-types__details__list">
@@ -184,7 +202,7 @@
 						</div>
 					</div>
 					<div class="repair-types__description">
-						<img src="./images/overhaul.png" alt="Overhaul" width="392" height="421">
+						<img src="./images/overhaul.png" alt="Overhaul">
 						<div class="repair-types__details">
 							<strong class="repair-type">Overhaul</strong>
 							<ul class="repair-types__details__list">
@@ -201,7 +219,7 @@
 						</div>
 					</div>
 					<div class="repair-types__description">
-						<img src="./images/designer-repair.png" alt="Designer repair" width="392" height="421">
+						<img src="./images/designer-repair.png" alt="Designer repair">
 						<div class="repair-types__details">
 							<strong class="repair-type">Designer Repair</strong>
 							<ul class="repair-types__details__list">
@@ -218,7 +236,83 @@
 						</div>
 					</div>
 				</div>
+				<!--Конец десктопной версии блока с фотографиями типов ремонтов-->
+
+				<!--Начало мобильной версии блока с фотографиями типов ремонтов-->
+				<div class="repair-types__list-mobile">
+					<div class="repair-types__description-mobile">
+						<img src="./mobile/images/redecoration-small.jpg" alt="Redecoration">
+						<div class="repair-types__details-mobile">
+							<strong class="repair-type-mobile">Redecorating</strong>
+							<ul class="repair-types__details__list-mobile">
+								<li>Dismantling of old coatings</li>
+								<li>Wallpapering</li>
+								<li>Painting walls and ceilings</li>
+								<li>Laying flooring</li>
+								<li>Replacing plumbing</li>
+								<li>Replacing sockets and switches</li>
+								<li>Replacing doors</li>
+							</ul>
+							<div class="repair-types__price-mobile">from 900 rub / m2
+							</div>
+						</div>
+					</div>
+					<div class="repair-types__description-mobile">
+						<img src="./mobile/images/overhaul-small.jpg" alt="Overhaul">
+						<div class="repair-types__details-mobile">
+							<strong class="repair-type-mobile">Overhaul</strong>
+							<ul class="repair-types__details__list-mobile">
+								<li>Dismantling of old coatings</li>
+								<li>Wallpapering</li>
+								<li>Painting walls and ceilings</li>
+								<li>Laying flooring</li>
+								<li>Replacing plumbing</li>
+								<li>Replacing sockets and switches</li>
+								<li>Replacing doors</li>
+							</ul>
+							<div class="repair-types__price-mobile">from 1800 rub / m2
+							</div>
+						</div>
+					</div>
+					<div class="repair-types__description-mobile">
+						<img src="./mobile/images/designer-repair-small.jpg" alt="Designer repair">
+						<div class="repair-types__details-mobile">
+							<strong class="repair-type-mobile">Designer Repair</strong>
+							<ul class="repair-types__details__list-mobile">
+								<li>Dismantling of old coatings</li>
+								<li>Wallpapering</li>
+								<li>Painting walls and ceilings</li>
+								<li>Laying flooring</li>
+								<li>Replacing plumbing</li>
+								<li>Replacing sockets and switches</li>
+								<li>Replacing doors</li>
+							</ul>
+							<div class="repair-types__price-mobile">from 4000 rub / m2
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Конец мобильной версии блока с фотографиями типов ремонтов-->
+
+				<!--Начало фрагмента со слайдером для мобильной версии в качестве замены блоку fantasies-->
+				<div class="repair-types__fantasies-mini">
+					<h3 class="repair-types__fantasies-mini-title">We realize your wildest fantasies
+					</h3>
+					<div class="fantasies__examples-mobile">
+						<div class="examples-arrow-mobile-left">
+							<div class="arrow-left">
+							</div>
+						</div>
+						<div class="examples-arrow-mobile-right">
+							<div class="arrow-right">
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</div>
+
+			<!--Блок cost-estimate - только для десктопа!-->
 			<div class="cost-estimate">
 				<div class="cost-estimate__main-block">
 					<div class="cost-estimate__steps">
@@ -266,17 +360,12 @@
 							<div class="cost-estimate__request-form__fields">
 								<label class="form-label" for="cost-estimate__customer-email">Email</label>
 								<input id="cost-estimate__customer-email" type="text" name="Customer email" placeholder="Your email">
-								<!-- <div class="cost-estimate-agree">
-									<input type="checkbox" id="estimate-personal-data" value="agreed" checked style="display: inline;">
-									<label class="data-processing is-white" for="estimate-personal-data">I agree to the processing of personal data	
-									</label>
-								</div> -->
 								<div class="cost-estimate-agree">
 								  <label class="agree-label" for="estimate-personal-data">
 								    <input type="checkbox" class="agree-checkbox" id="estimate-personal-data" value="agreed" checked>
-								    <div class="agree-fake-checkbox">
-								    </div>
-								    <span class="data-processing is-white">I agree to the processing of personal data</span>
+								    <span class="agree-fake-checkbox">
+								    </span>
+								    <span class="data-processing-white">I agree to the processing of personal data</span>
 								  </label>
 								</div>
 							</div>
@@ -294,7 +383,9 @@
 				</div>
 			</div>
 		</section>
-		<section class="fantasies wrapper">
+
+		<!--Секция fantasies - тоже только для десктопа!-->
+		<section class="fantasies">
 			<div class="fantasies__background">
 				<div class="fantasies__background__shade">
 					<div class="fantasies__main-block">
@@ -340,18 +431,18 @@
 						<div class="fantasies__images">
 							<div class="fantasies__images__left-block">
 								<div class="fantasies__images__top-image">
-									<img src="./images/design-example-1.jpg" width="354" height="557" alt="American classic - photo 1">
+									<img src="./images/design-example-1.jpg" width="354" height="557" alt="American classic design - photo 1">
 								</div>
 								<div class="fantasies_images__bottom-image">
-									<img src="./images/design-example-2.jpg" width=""354 height="350" alt="American classic - photo 2">
+									<img src="./images/design-example-2.jpg" width="354" height="350" alt="American classic design - photo 2">
 								</div>
 							</div>
 							<div class="fantasies__images__right-block">
 								<div class="fantasies__images__top-image">
-									<img src="./images/design-example-3.jpg" width="354" height="275" alt="American classic - photo 3">
+									<img src="./images/design-example-3.jpg" width="354" height="275" alt="American classic design - photo 3">
 								</div>
 								<div class="fantasies_images__bottom-image">
-									<img src="./images/design-example-4.jpg" width="354" height="625" alt="American classic - photo 4">
+									<img src="./images/design-example-4.jpg" width="354" height="625" alt="American classic design - photo 4">
 								</div>
 							</div>
 						</div>
@@ -359,18 +450,20 @@
 				</div>
 			</div>
 		</section>
-		<section class="clients-reviews wrapper">
+
+		<!--Секция clients-reviews - тоже только для десктопа!-->
+		<section class="clients-reviews">
 			<h3 class="clients-reviews__title" id="clients">our clients			
 			</h3>
 			<div class="icon handshake">
-				<img src="./images/handshake.svg" width="" height="" alt="">
+				<img src="./images/handshake.svg" alt="Handshake icon">
 			</div>
 			<p class="clients-reviews__intro">80% of our customers recommend us to their <br>friends and family.
 			</p>
-			<div class="clients-reviews__reviews"><!--background-->
+			<div class="clients-reviews__reviews">
 				<div class="clients-reviews__client-review">
 					<div class="clients-reviews__client">
-						<img class="client-photo" src="./images/client-1.png" width="" height="" alt="">
+						<img class="client-photo" src="./images/client-1.png" alt="Our client">
 						<h4 class="client-name">Fedosova Maria <br>Konstantinovna</h4>
 					</div>
 					<p class="clients-reviews__client-review-paragraph">I want to thank the guys for their work. We put your shower part in repair. I am very grateful that I referred to the repair as to my own. Great thanks I express the project to Georgia for its professionalism and approach.</p>
@@ -378,14 +471,14 @@
 					<div class="clients-reviews__figures-wrapper">
 						<div class="clients-reviews__figures-left">
 							<div class="clients-figures-icon">
-								<img src="./images/area.svg" width="" height="" alt="area">
+								<img src="./images/area.svg" alt="area">
 							</div>
 							<div class="clients-figures-fig">40 m2
 							</div>
 						</div>
 						<div class="clients-reviews__figures-right">
 							<div class="clients-figures-icon">
-								<img src="./images/timing.svg" width="" height="" alt="timing">
+								<img src="./images/timing.svg" alt="timing">
 							</div>
 							<div class="clients-figures-fig">48 DAYS
 							</div>
@@ -394,7 +487,7 @@
 				</div>
 				<div class="clients-reviews__client-review">
 					<div class="clients-reviews__client">
-						<img class="client-photo" src="./images/client-2.png" width="" height="" alt="">
+						<img class="client-photo" src="./images/client-2.png" alt="Our client">
 						<h4 class="client-name">Afanasyev Sergey <br>Alexandrovich</h4>
 					</div>
 					<p class="clients-reviews__client-review-paragraph">I want to thank the guys for their work. We put your shower part in repair. I am very grateful that I referred to the repair as to my own. Great thanks I express the project to Georgia for its professionalism and approach.</p>
@@ -402,14 +495,14 @@
 					<div class="clients-reviews__figures-wrapper">
 						<div class="clients-reviews__figures-left">
 							<div class="clients-figures-icon">
-								<img src="./images/area.svg" width="" height="" alt="area">
+								<img src="./images/area.svg" alt="area">
 							</div>
 							<div class="clients-figures-fig">90 m2
 							</div>
 						</div>
 						<div class="clients-reviews__figures-right">
 							<div class="clients-figures-icon">
-								<img src="./images/timing.svg" width="" height="" alt="timing">
+								<img src="./images/timing.svg" alt="timing">
 							</div>
 							<div class="clients-figures-fig">128 DAYS
 							</div>
@@ -418,7 +511,7 @@
 				</div>
 				<div class="clients-reviews__client-review">
 					<div class="clients-reviews__client">
-						<img class="client-photo" src="./images/client-3.png" width="" height="" alt="">
+						<img class="client-photo" src="./images/client-3.png" alt="Our client">
 						<h4 class="client-name">Kiriev Egor <br>Leonidovich</h4>
 					</div>
 					<p class="clients-reviews__client-review-paragraph">I want to thank the guys for their work. We put your shower part in repair. I am very grateful that I referred to the repair as to my own. Great thanks I express the project to Georgia for its professionalism and approach.</p>
@@ -426,14 +519,14 @@
 					<div class="clients-reviews__figures-wrapper">
 						<div class="clients-reviews__figures-left">
 							<div class="clients-figures-icon">
-								<img src="./images/area.svg" width="" height="" alt="area">
+								<img src="./images/area.svg" alt="area">
 							</div>
 							<div class="clients-figures-fig">56 m2
 							</div>
 						</div>
 						<div class="clients-reviews__figures-right">
 							<div class="clients-figures-icon">
-								<img src="./images/timing.svg" width="" height="" alt="timing">
+								<img src="./images/timing.svg" alt="timing">
 							</div>
 							<div class="clients-figures-fig">86 DAYS
 							</div>
@@ -442,6 +535,8 @@
 				</div>
 			</div>
 		</section>
+
+		<!--Секция contacts - десктопная версия-->
 		<section class="contacts">
 			<div class="dim-city">
 				<div class="dim-city__left">
@@ -473,16 +568,12 @@
 									<input id="questions__customer-question" type="text" name="question" placeholder="I want to know:">
 								</div>
 							</div>
-							<!-- <div class="questions__agree">
-								<input type="checkbox" id="questions-personal-data" value="agreed" checked>
-								<label class="data-processing is-white" for="questions-personal-data">I agree to the processing of personal data</span>
-							</div> -->
 							<div class="contacts-agree">
 								  <label class="agree-label" for="questions-personal-data">
 								    <input type="checkbox" class="agree-checkbox" id="questions-personal-data" value="agreed" checked>
-								    <div class="agree-fake-checkbox">
-								    </div>
-								    <span class="data-processing is-white">I agree to the processing of personal data</span>
+								    <span class="agree-fake-checkbox">
+								    </span>
+								    <span class="data-processing-white">I agree to the processing of personal data</span>
 								  </label>
 								</div>
 							<button class="contacts__form__submit" type="submit">submit</button>				
@@ -497,42 +588,96 @@
 							</a>
 						</div>
 						<div class="contacts-icon">
-							<a href="" target="_blank">
+							<a href="https://www.instagram.com" target="_blank">
 								<img src="./images/instagram.svg" alt="Find us on Instagram">
 							</a>
 						</div>
 					</div>
 					<div class="contacts__map">
 						<!--Вероятно, здесь должна быть карта во фрейме: <iframe src="" width="" height=""></iframe>-->
-						<img src="./images/map.png" width="" height="" alt="Our office on the map">
+						<img src="./images/map.png" width="985" height="526" alt="Our office on the map">
 					</div>
 				</div>
 			</div>
 		</section>
+		<!--Конец секции contacts для десктопной версии-->
+
+		<!--Начало секции contacts для мобильной версии-->
+		<div class="contacts-mobile-wrapper">
+			<section class="contacts-mobile">
+				<form class="contacts__form-mobile" action="#" method="post" name="questions-mob">
+					<h3 class="contacts__form-mobile__title">have any questions?
+					</h3>
+					<div class="contacts__form-mobile__fields">
+						<label class="form-label" for="questions-mob__customer-name">Name</label>
+						<input id="questions-mob__customer-name" type="text" name="Customer name" placeholder="What is your name:">
+					</div>
+					<div class="contacts__form-mobile__fields">
+						<label class="form-label" for="questions-mob__customer-phone">Phone</label>
+						<input id="questions-mob__customer-phone" type="text" name="Customer phone" placeholder="Your phone number:">
+					</div>
+					<div class="contacts__form-mobile__fields">
+						<label class="form-label" for="questions-mob__customer-question">Question</label>
+						<input id="questions-mob__customer-question" type="text" name="Customer email" placeholder="I want to know:">
+						<div class="contacts__form-mobile-agree">
+						  <label class="agree-label" for="questions-mob-personal-data">
+						    <input type="checkbox" class="agree-checkbox" id="questions-mob-personal-data" value="agreed" checked>
+						    <span class="agree-fake-checkbox">
+						    </span>
+						    <span class="data-processing-white">I agree to the processing of personal data</span>
+						  </label>
+						</div>
+					</div>
+					<div class="contacts__form-mobile__submit">
+						<button class="contacts__form-mobile__submit-button" type="submit">submit</button>
+					</div>
+				</form>
+				<div class="map-small">
+					<img src="./mobile/images/map-small.jpg" width="340" height="255" alt="Find us on the map">
+				</div>
+				<h3 class="contacts-mobile__address">Rostov-on-Don, Nansen St., 239<br>Shopping Center Decorum<br>Tel +7 (928) 768 32 29
+				</h3>
+				<div class="contacts-mobile__icons">
+					<div class="contacts-mobile__icon">
+						<a href="mailto:example@example.com">
+						<img class="email-icon" src="./images/mail-us.svg" alt="Send us an email">
+						</a>
+					</div>
+					<div class="contacts-mobile__icon">
+						<a href="https://www.instagram.com" target="_blank">
+							<img class="instag-icon" src="./images/instagram.svg" alt="Find us on Instagram">
+						</a>
+					</div>					
+				</div>
+			</section>
+		</div>
+		<!--Конец секции contacts для мобильной версии-->
 	</main>
+
+	<!--Footer - только для десктопа-->
 	<footer>
 		<div class="wrapper">
 			<nav class="footer__nav">
-				<a class="nav__link" href="#" target="_self">IC &quot;Repair Design Project&quot;</a>
+				<a class="nav__link this-page" href="#">IC &quot;Repair Design Project&quot;</a>
 					<!--Проставить href везде-->
 				<ul class="nav__ul">
 					<li>
-						<a class="nav__link" href="#" target="_self">HOME</a>
+						<a class="nav__link this-page" href="#">HOME</a>
 					</li>
 					<li>
-						<a class="nav__link" href="#projects" target="_self">PROJECTS</a>
+						<a class="nav__link" href="#projects">PROJECTS</a>
 					</li>
 					<li>
-					<a class="nav__link" href="#measurement" target="_self">MEASUREMENT</a>
+					<a class="nav__link" href="#measurement">MEASUREMENT</a>
 					</li>
 					<li>
-						<a class="nav__link" href="#" target="_self">TEAM</a>
+						<a class="nav__link" href="#">TEAM</a>
 					</li>
 					<li>
-						<a class="nav__link" href="#clients" target="_self">REVIEWS</a>
+						<a class="nav__link" href="#clients">REVIEWS</a>
 					</li>
 					<li>
-						<a class="nav__link" href="#contacts" target="_self">CONTACTS</a>
+						<a class="nav__link" href="#contacts">CONTACTS</a>
 					</li>
 				</ul>
 				<div class="nav__phone">
@@ -543,5 +688,6 @@
 			</nav>
 		</div>
 	</footer>
+
 </body>
 </html>
